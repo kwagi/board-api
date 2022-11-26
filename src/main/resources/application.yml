@@ -1,0 +1,48 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: board_admin
+    password: rhkrrl9385
+    url: jdbc:mariadb://34.64.201.205:3306/board_db
+
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      format_sql: true
+      hibernate:
+        show_sql: true
+    defer-datasource-initialization: true
+
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+  mustache:
+    suffix: .html
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 20MB
+
+  sql:
+    init:
+      mode: always
+
+
+logging:
+  level:
+    org.hibernate.sql: trace
+    org.hibernate.type: trace
+
+server:
+  port: 8080
+
