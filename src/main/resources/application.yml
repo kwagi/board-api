@@ -1,7 +1,7 @@
 spring:
   h2:
     console:
-      enabled: true
+      enabled: false
       path: /h2-console
 
   datasource:
@@ -24,6 +24,8 @@ spring:
     hiddenmethod:
       filter:
         enabled: true
+    pathmatch:
+      matching-strategy: ant_path_matcher
 
   mustache:
     suffix: .html

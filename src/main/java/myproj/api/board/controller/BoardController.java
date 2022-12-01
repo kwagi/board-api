@@ -21,7 +21,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-public class BoardController {
+public final class BoardController {
 
     private final BoardService boardService;
 

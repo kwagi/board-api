@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class BoardReply {
+public final class BoardReply {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class BoardReplyAnswer {
+public final class BoardReplyAnswer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

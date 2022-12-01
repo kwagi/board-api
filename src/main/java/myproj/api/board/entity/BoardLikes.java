@@ -10,7 +10,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class BoardLikes {
+public final class BoardLikes {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-public class BoardReplyController {
+public final class BoardReplyController {
 
     private final BoardService boardService;
 

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-public class BoardReplyAnswerController {
+public final class BoardReplyAnswerController {
 
     private final BoardService boardService;
 

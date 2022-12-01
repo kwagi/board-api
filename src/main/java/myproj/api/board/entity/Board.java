@@ -14,7 +14,7 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
-public class Board {
+public final class Board {
 
     @Id
     @Column(name = "board_id")
