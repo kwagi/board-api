@@ -30,7 +30,7 @@ import java.util.*;
 
 @Service
 @RequiredArgsConstructor
-public class BoardServiceImpl implements BoardService {
+public final class BoardServiceImpl implements BoardService {
 
     private final BoardRepository boardRepository;
     private final BoardLikesRepository boardLikesRepository;

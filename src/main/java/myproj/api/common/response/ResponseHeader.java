@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ResponseHeader {
+public final class ResponseHeader {
 
     private String message;
     private int status;

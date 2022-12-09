@@ -35,7 +35,7 @@ public class JwtUtils {
 
         String token = JWT.create()
                 .withExpiresAt(expiredDate)
-                .withClaim(CLAIM_MEMBER_ID, member.getMemberId())
+                .withClaim(CLAIM_MEMBER_ID, member.getId())
                 .withSubject(member.getName())
                 .withIssuer(member.getEmail())
                 .sign(Algorithm.HMAC512(key.getBytes(StandardCharsets.UTF_8)));

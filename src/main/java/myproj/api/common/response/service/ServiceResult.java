@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ServiceResult {
+public final class ServiceResult {
 
     private String message;
     private Object data;

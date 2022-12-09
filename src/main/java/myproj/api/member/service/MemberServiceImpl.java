@@ -19,7 +19,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class MemberServiceImpl implements MemberService {
+public final class MemberServiceImpl implements MemberService {
 
     private final MemberRepository memberRepository;
 

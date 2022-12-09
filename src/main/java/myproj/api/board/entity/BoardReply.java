@@ -19,7 +19,7 @@ public final class BoardReply {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "board_reply_id")
-    private Long id;
+    private final Long id = 0L;
 
     private String replyWriter;
     private String replyUuid;

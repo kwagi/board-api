@@ -10,7 +10,7 @@ import org.springframework.http.HttpStatus;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ReponseMessage {
+public final class ReponseMessage {
 
     private ResponseHeader headers;
     private Object body;

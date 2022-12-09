@@ -19,7 +19,7 @@ public final class Board {
     @Id
     @Column(name = "board_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private final Long id = 0L;
 
     private String email;
     private String title;
