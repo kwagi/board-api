@@ -26,7 +26,7 @@ public class MemberRegisterInput {
     private String password;
 
     @NotBlank(message = "이름을 입력하세요.")
-    @Pattern(regexp = "^[가-힣]$", message = "올바른 이름을 입력하세요.")
+    @Pattern(regexp = "^[가-힣]*$", message = "올바른 이름을 입력하세요.")
     private String name;
 
     @NotBlank(message = "전화번호를 입력하세요.")
