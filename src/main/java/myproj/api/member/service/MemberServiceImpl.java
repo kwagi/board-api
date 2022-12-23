@@ -11,8 +11,7 @@ import myproj.api.member.repository.MemberRepository;
 import myproj.api.member.type.CurrentStatus;
 import org.springframework.stereotype.Service;
 
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -37,7 +36,7 @@ public final class MemberServiceImpl implements MemberService {
                 .password(PasswordUtils.getEncryptedPassword(memberRegisterInput.getPassword()))
                 .name(memberRegisterInput.getName())
                 .phone(memberRegisterInput.getPhone())
-                .regDate(ZonedDateTime.now(ZoneId.of("Asia/Seoul")))
+                .regDate(LocalDateTime.now())
                 .build());
 
         return ServiceResult.success();
@@ -61,7 +60,7 @@ public final class MemberServiceImpl implements MemberService {
         MemberLoginToken memberLoginToken = JwtUtils.createToken(member);
 
         member.setStatus(CurrentStatus.RUNNING);
-        member.setRecentDate(ZonedDateTime.now(ZoneId.of("Asia/Seoul")));
+        member.setRecentDate(LocalDateTime.now());
         data.put("email", member.getEmail());
         data.put("name", member.getName());
         data.put("phone", member.getPhone());

@@ -4,7 +4,7 @@ import lombok.*;
 import myproj.api.member.type.CurrentStatus;
 
 import javax.persistence.*;
-import java.time.ZonedDateTime;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -17,7 +17,7 @@ public final class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_id")
-    private final Long id = 0L;
+    private final Long id = null;
 
     private String email;
     private String password;
@@ -27,6 +27,6 @@ public final class Member {
     @Enumerated(EnumType.STRING)
     private CurrentStatus status;
 
-    private ZonedDateTime regDate;
-    private ZonedDateTime recentDate;
+    private LocalDateTime regDate;
+    private LocalDateTime recentDate;
 }
