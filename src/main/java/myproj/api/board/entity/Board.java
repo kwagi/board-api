@@ -19,7 +19,7 @@ public final class Board {
     @Id
     @Column(name = "board_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private final Long id = 0L;
+    private final Long id = 0L; //reflection
 
     private String email;
     private String title;
@@ -32,7 +32,7 @@ public final class Board {
     private String fileTitle;
 
     @OneToMany(mappedBy = "board", orphanRemoval = true)
-    @JsonIgnoreProperties({"board"})
+    @JsonIgnoreProperties({"board"}) //객체 무한참조 방지
     @Builder.Default
     private final List<BoardReply> boardReplyList = new ArrayList<>();
 

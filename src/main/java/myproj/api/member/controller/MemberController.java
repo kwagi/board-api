@@ -1,5 +1,6 @@
 package myproj.api.member.controller;
 
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import myproj.api.common.response.ResponseResult;
@@ -22,6 +23,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@Api(tags = "회원 API")
 public final class MemberController {
 
     private final MemberService memberService;

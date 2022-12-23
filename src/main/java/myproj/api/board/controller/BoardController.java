@@ -1,5 +1,6 @@
 package myproj.api.board.controller;
 
+import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import myproj.api.board.model.BoardPostInput;
 import myproj.api.board.model.MyPostInput;
@@ -21,6 +22,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@Api(tags = "게시글 API")
 public final class BoardController {
 
     private final BoardService boardService;
@@ -44,7 +46,7 @@ public final class BoardController {
     }
 
     @PostMapping("/api/board/post")//@RequestParam 과 @ModelAttribution 는 디폴트
-    //다중 이미지는 테이블을 분리해야하므로 많이 귀찮아서 다음에 구현
+    //다중 이미지는 테이블을 분리해야하므로 다음에 구현
     //error 파라미터 위치는 validation 대상 바로 다음
     public ResponseEntity<?> postBoard(@Valid BoardPostInput boardPostInput, Errors errors, @RequestParam(required = false) List<MultipartFile> files) throws IOException {
         List<ResponseErrors> responseErrors = new ArrayList<>();
