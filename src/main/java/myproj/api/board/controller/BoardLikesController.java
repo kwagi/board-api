@@ -14,7 +14,7 @@ public final class BoardLikesController {
 
     private final BoardService boardService;
 
-    @PostMapping("/api/board/clickLikes")
+    @PostMapping(value = "/api/board/clickLikes", produces = "application/json")
     public ResponseEntity<?> clickLikes(String email, long id) {
         ServiceResult result = boardService.clickLikes(email, id);
         return ResponseResult.result(result);

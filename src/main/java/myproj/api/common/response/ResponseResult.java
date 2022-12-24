@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 public final class ResponseResult {
 
     public static ResponseEntity<?> fail(String message, Object data) {
-        return ResponseEntity.badRequest().body(ReponseMessage.fail(message, data));
+        return ResponseEntity.badRequest().body(ResponseMessage.fail(message, data));
     }
 
     public static ResponseEntity<?> fail(String message) {
