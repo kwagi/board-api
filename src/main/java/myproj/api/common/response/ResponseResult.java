@@ -1,11 +1,13 @@
 package myproj.api.common.response;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import myproj.api.common.response.service.ServiceResult;
 import org.springframework.http.ResponseEntity;
 
 @Getter
+@AllArgsConstructor
 @Builder
 public final class ResponseResult {
 

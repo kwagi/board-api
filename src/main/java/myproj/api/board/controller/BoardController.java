@@ -1,6 +1,5 @@
 package myproj.api.board.controller;
 
-import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import myproj.api.board.model.BoardPostInput;
 import myproj.api.board.model.MyPostInput;
@@ -22,7 +21,6 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@Api(tags = "게시글 API")
 public final class BoardController {
 
     private final BoardService boardService;
