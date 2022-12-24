@@ -7,7 +7,7 @@ import myproj.api.board.service.BoardService;
 import myproj.api.common.response.ResponseResult;
 import myproj.api.common.response.service.ServiceResult;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +18,7 @@ public final class BoardLikesController {
 
     private final BoardService boardService;
 
-    @PatchMapping("/api/board/clickLikes")
+    @PostMapping("/api/board/clickLikes")
     @ApiOperation(value = "게시글 좋아요 누르기")
     public ResponseEntity<?> clickLikes(@RequestParam String email, @RequestParam long id) {
         ServiceResult result = boardService.clickLikes(email, id);
