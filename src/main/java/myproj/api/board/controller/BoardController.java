@@ -44,8 +44,6 @@ public final class BoardController {
     }
 
     @PostMapping("/api/board/post")//@RequestParam 과 @ModelAttribution 는 디폴트
-    //다중 이미지는 테이블을 분리해야하므로 다음에 구현
-    //error 파라미터 위치는 validation 대상 바로 다음
     public ResponseEntity<?> postBoard(@Valid BoardPostInput boardPostInput, Errors errors, @RequestParam(required = false) List<MultipartFile> files) throws IOException {
         List<ResponseErrors> responseErrors = new ArrayList<>();
         if (errors.hasErrors()) {

@@ -27,6 +27,7 @@ public final class Board {
     private int hits;
     private int likes;
     private LocalDateTime postDate;
+
     private String fileName;
     private String filePath;
     private String fileTitle;

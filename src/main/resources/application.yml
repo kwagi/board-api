@@ -6,9 +6,9 @@ spring:
 
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    username: board_admin
-    password: rhkrrl9385
-    url: jdbc:mariadb://34.64.201.205:3306/board_db
+  #    username:
+  #    password:
+  #    url:
 
 
   jpa:
